@@ -1,47 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>欢迎来到本次网页！</title>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
     <style>
-    .dahezi{
-    width:500px;
-    height:600px;
-    background:red;
-    margin:auto;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 2px 3px #222;
-    }  
-    .dahezi img{
-    width:500px;
-    height:400px;
-    float:left;
-    }
-    .dier{
-    width:500px;
-    height:450px;
-    background:#fff;
-    float:left;
-    text-align:center;
-    line-height:60px;
-    font-size:20pt;
-    }
-    .jb{
-    color:red;}
-    body{
-    background:#eee;
-    }
-    
+        body {
+            margin: 0;
+            background-color: #ccc;
+            display: flex;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        * {
+            border: 1px solid black;    
+        }
+
+        .baise {
+            background-color: white;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .flex5 {
+            flex: 5;
+        }
     </style>
-  </head>
-  <body> 
-    <div class="dahezi">
-      <img src='https://i.328888.xyz/2023/01/08/kqSjA.jpeg'  alt="">
-      <div class="dier">
-        <span class="jb">欢迎来到本次网页！</span>
-        <br>初来咋到。</div>
+</head>
+
+<body>
+    <div style="height:100vh" class="flex1 baise"></div>
+    <div class="flex5 baise flex column">
+        <div class="flex1 flex ">
+            <div style="background-color:yellow; margin:30px" class="flex1 "></div>
+            <div style="background-color:yellow; margin:30px" class="flex1 "></div>
+            <div style="background-color:yellow; margin:30px" class="flex1 "></div>
+            <div style="background-color:yellow; margin:30px" class="flex1 "></div>
+        </div>
+        <div class="flex5 flex column">
+            <div class="flex5 flex green">
+                <div class="flex1"></div>
+                <div class="flex1"></div>
+                <div class="flex1"></div>
+                <div class="flex1"></div>
+            </div>
+            <div class="flex1"></div>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>
